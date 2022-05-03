@@ -19,7 +19,7 @@ export default function RightContainer({ sxStyle, children }: { sxStyle?: SxProp
   }, [])
 
   return (
-    <Box display={'flex'} justifyContent="right" sx={{ ...sxStyle }}>
+    <Box display={'flex'} flexDirection="row-reverse" sx={{ ...sxStyle }}>
       <Box
         width={bodyWidth}
         sx={{
