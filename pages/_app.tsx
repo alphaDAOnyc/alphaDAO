@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { styled } from '@mui/material'
 import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 import { ThemeProvider } from '../src/theme'
 import theme from '../src/theme'
 import Head from 'next/head'
@@ -41,12 +42,13 @@ function MyApp({ Component, pageProps }: IAppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Next</title>
+        <title>alphaDAO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Head>
       <AppWrapper>
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </AppWrapper>
     </ThemeProvider>
   )

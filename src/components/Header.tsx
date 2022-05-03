@@ -1,4 +1,4 @@
-import { Box, Drawer, Link as MuiLink, Typography, useTheme } from '@mui/material'
+import { Box, Drawer, Link as MuiLink, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 import { CommonContainer } from './Styled'
 import { useIsSMDown } from '../theme'
@@ -88,18 +88,23 @@ export default function Header() {
               display={'flex'}
               gap="20px"
               sx={{
+                fontFamily: 'PingFang SC',
+                fontWeight: 600,
+                fontSize: 18,
                 '&>a p, & .link-span': {
                   display: 'inline-block',
-                  padding: '2px 8px',
+                  padding: '2px 10px',
                   color: theme.textColor.text1,
                 },
-                '& .default a': {
+                '& a': {
                   color: theme.textColor.text1,
                 },
                 '& .active': {
                   background: 'linear-gradient(226.72deg, #9482FE -5.64%, #21549B 97.55%)',
                   borderRadius: '17px',
-                  color: '#fff',
+                  '& a': {
+                    color: '#fff',
+                  },
                 },
               }}
             >
@@ -173,12 +178,21 @@ function Menus() {
       {list.map((item, index) =>
         item.externalLink ? (
           <MuiLink key={index} target="_blank" className="hover6" underline="none" href={item.externalLink}>
-            <Typography sx={{ cursor: 'pointer' }} fontSize="16px" fontWeight={500}>
-              {item.name}
-            </Typography>
+            <span>{item.name}</span>
           </MuiLink>
         ) : (
-          <span key={index} className={`link-span hover6 ${router.asPath === item.link ? 'active' : 'default'}`}>
+          <span
+            key={index}
+            className={`link-span hover6 ${
+              router.asPath.length > 2 && item.link.length > 2
+                ? router.asPath.indexOf(item.link) === 0
+                  ? 'active'
+                  : 'default'
+                : router.asPath === item.link
+                ? 'active'
+                : 'default'
+            }`}
+          >
             <Link href={item.link}>{item.name}</Link>
           </span>
         )

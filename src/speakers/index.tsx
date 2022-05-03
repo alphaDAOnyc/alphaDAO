@@ -5,6 +5,7 @@ import RightContainer from '../components/RightContainer'
 import { CommonWidth } from '../components/Styled'
 import Avatar from '@mui/material/Avatar'
 import { speakerList, SpeakerInfo } from '../data/speakers'
+import { useRouter } from 'next/router'
 
 export default function Speakers() {
   return (
@@ -41,8 +42,9 @@ export default function Speakers() {
 }
 
 function SpeakerItem({ speakerInfo }: { speakerInfo: SpeakerInfo }) {
+  const router = useRouter()
   return (
-    <Box>
+    <Box sx={{ cursor: 'pointer' }} onClick={() => router.push('/speakers/' + speakerInfo.name)}>
       <Avatar variant="square" sx={{ width: 173, height: 173 }} src={speakerInfo.avatar}>
         no image
       </Avatar>

@@ -2,7 +2,7 @@ import { Box, styled } from '@mui/material'
 
 export const CommonContainer = styled(Box)(({ theme, maxWidth, padding }: any) => ({
   width: '100%',
-  maxWidth: maxWidth || 1140,
+  maxWidth: maxWidth || 1180,
   margin: '0 auto',
   padding: '0 20px',
   [theme.breakpoints.down('sm')]: {

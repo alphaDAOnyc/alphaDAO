@@ -68,7 +68,14 @@ export default function Agenda() {
             </Box>
           </Box>
           <Box display={'flex'} mt="112px" justifyContent="right">
-            <Button width={238} height={39} color="#fff">
+            <Button
+              width={238}
+              height={39}
+              color="#fff"
+              onClick={() =>
+                window.open('https://drive.google.com/file/d/1mYixXiFsYKgpmZme5iTU5zN8axHOZ8OZ/view?usp=sharing')
+              }
+            >
               Download Program Outline
             </Button>
           </Box>

@@ -49,7 +49,8 @@ export const override: any = {
   MuiTypography: {
     styleOverrides: {
       root: {
-        fontFamily: 'Osaka',
+        // fontFamily: 'Osaka',
+        fontFamily: 'Apple SD Gothic Neo',
         lineHeight: 1.52,
       },
       h2: {
@@ -66,6 +67,7 @@ export const override: any = {
       },
       body1: {
         fontSize: 16,
+        fontFamily: 'Osaka',
         color: theme.textColor.text7,
       },
     },
@@ -74,6 +76,9 @@ export const override: any = {
 
 export default createTheme({
   ...theme,
+  typography: {
+    fontFamily: ['Apple SD Gothic Neo', 'Osaka', 'PingFang SC'].join(','),
+  },
   components: {
     ...override,
   },

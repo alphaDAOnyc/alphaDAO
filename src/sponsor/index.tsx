@@ -1,4 +1,4 @@
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, Link, Tooltip } from '@mui/material'
 import React from 'react'
 import Banner from '../components/Banner'
 import RightContainer from '../components/RightContainer'
@@ -21,9 +21,17 @@ export default function Sponsor() {
             Sponsor
           </Typography>
           <Box display={'flex'} mt="218px" justifyContent="space-between" alignItems={'center'}>
-            <img src={GalaxyLogo.src} alt="" style={{ height: 50 }} />
-            <img src={PolygonLogo.src} alt="" style={{ height: 50 }} />
-            <img src={AlphaLogo.src} alt="" />
+            <Link underline="none" href="https://www.galaxydigital.io" target="_blank">
+              <img src={GalaxyLogo.src} alt="" style={{ height: 50 }} />
+            </Link>
+            <Link underline="none" href="https://polygon.technology/" target="_blank">
+              <img src={PolygonLogo.src} alt="" style={{ height: 50 }} />
+            </Link>
+            <Tooltip title="Coming soon" arrow>
+              <Link underline="none" target="_blank">
+                <img src={AlphaLogo.src} alt="" />
+              </Link>
+            </Tooltip>
           </Box>
         </CommonWidth>
       </RightContainer>

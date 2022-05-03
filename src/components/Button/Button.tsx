@@ -29,6 +29,7 @@ export default function Button(props: Props) {
     fontSize,
     color,
     children,
+    backgroundColor,
     borderRadius,
     primary,
     fontWeight,
@@ -47,13 +48,14 @@ export default function Button(props: Props) {
         fontSize: fontSize || 18,
         fontWeight: fontWeight || 500,
         transition: '.3s',
+        fontFamily: 'Apple SD Gothic Neo',
         borderRadius: borderRadius || '29px',
         // backgroundColor: backgroundColor
         //   ? backgroundColor
         //   : primary
         //   ? theme.palette.primary.main
         //   : theme.palette.background.default,
-        background: 'linear-gradient(226.72deg, #9482FE -5.64%, #21549B 97.55%)',
+        background: backgroundColor || 'linear-gradient(226.72deg, #9482FE -5.64%, #21549B 97.55%)',
         color: color ? color : primary ? theme.palette.primary.contrastText : theme.palette.text.primary,
         '&:hover': {
           opacity: 0.8,
@@ -84,7 +86,7 @@ export function OutlineButton(props: Props) {
         padding: '0 10px',
         height: height || 60,
         transition: 'opacity .3s',
-        fontFamily: 'Inter, sans-serif',
+        fontFamily: 'Apple SD Gothic Neo',
         background: 'transparent',
         color: color || '#fff',
         borderRadius: borderRadius ?? '5px',
