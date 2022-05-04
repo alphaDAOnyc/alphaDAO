@@ -7,6 +7,7 @@ import Link from 'next/link'
 import PolygonLogo from '../assets/svg/polygon_logo.svg'
 import GalaxyLogo from '../assets/svg/galaxy_logo.svg'
 import { useRouter } from 'next/router'
+import menu from '../assets/svg/menu.svg'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -32,13 +33,13 @@ export default function Header() {
   // }, [calcBgOpacity])
 
   return (
-    <Box height={isSm ? 82 : '165px'}>
+    <Box height={'100px'}>
       <Box
         sx={{
           position: 'fixed',
           left: 0,
           top: 0,
-          height: isSm ? 82 : '165px',
+          height: '100px',
           width: '100vw',
           zIndex: 10,
           backgroundColor: '#fff',
@@ -48,13 +49,14 @@ export default function Header() {
           maxWidth={isSm ? 'unset' : '1180px'}
           height={'100%'}
           display={'flex'}
+          padding="0 30px"
           alignItems={'center'}
           justifyContent="space-between"
-          sx={{
-            '&>*': {
-              marginTop: '20px',
-            },
-          }}
+          // sx={{
+          //   '&>*': {
+          //     marginTop: { xs: 0, sm: '20px' },
+          //   },
+          // }}
         >
           <Link href="/" passHref>
             <Box display={'flex'} gap="19px" alignItems={'center'}>
@@ -71,18 +73,7 @@ export default function Header() {
           </Link>
 
           {isSm ? (
-            <svg
-              onClick={() => setOpen(true)}
-              width="24"
-              height="14"
-              viewBox="0 0 24 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line x1="1" y1="1" x2="23" y2="1" stroke="white" strokeWidth="2" strokeLinecap="round" />
-              <line x1="1" y1="7" x2="23" y2="7" stroke="white" strokeWidth="2" strokeLinecap="round" />
-              <line x1="1" y1="13" x2="12" y2="13" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            </svg>
+            <img onClick={() => setOpen(true)} src={menu.src} alt="" />
           ) : (
             <Box
               display={'flex'}
@@ -118,14 +109,43 @@ export default function Header() {
             onClose={() => setOpen(false)}
             sx={{
               '& .MuiPaper-root': {
-                width: '50%',
+                width: '100%',
                 height: '100vh',
-                background: theme.bgColor.bg2,
+                background: '#fff',
               },
             }}
           >
-            <Box display={'grid'} gap="24px" justifyContent={'center'} mt="24px">
-              <Menus />
+            <Box
+              display={'grid'}
+              gap="50px"
+              justifyContent={'center'}
+              mt="15vh"
+              sx={{
+                fontFamily: 'PingFang SC',
+                fontWeight: 600,
+                fontSize: 18,
+                '& .link-span': {
+                  display: 'inline-block',
+                  padding: '2px 10px',
+                  width: 150,
+                  textAlign: 'center',
+                  border: '1px solid #9881FF',
+                  borderRadius: '30px',
+                  color: theme.textColor.text1,
+                },
+                '& a': {
+                  color: theme.textColor.text1,
+                },
+                '& .active': {
+                  background: 'linear-gradient(226.72deg, #9482FE -5.64%, #21549B 97.55%)',
+                  borderRadius: '17px',
+                  '& a': {
+                    color: '#fff',
+                  },
+                },
+              }}
+            >
+              <Menus close={() => setOpen(false)} />
             </Box>
           </Drawer>
         </CommonContainer>
@@ -134,7 +154,7 @@ export default function Header() {
   )
 }
 
-function Menus() {
+function Menus({ close }: { close?: () => void }) {
   const router = useRouter()
 
   const list = [
@@ -177,12 +197,23 @@ function Menus() {
     <>
       {list.map((item, index) =>
         item.externalLink ? (
-          <MuiLink key={index} target="_blank" className="hover6" underline="none" href={item.externalLink}>
-            <span>{item.name}</span>
-          </MuiLink>
+          <span className="link-span">
+            <MuiLink
+              key={index}
+              target="_blank"
+              onClick={close}
+              className="hover6"
+              fontFamily={'inherit'}
+              underline="none"
+              href={item.externalLink}
+            >
+              {item.name}
+            </MuiLink>
+          </span>
         ) : (
           <span
             key={index}
+            onClick={close}
             className={`link-span hover6 ${
               router.asPath.length > 2 && item.link.length > 2
                 ? router.asPath.indexOf(item.link) === 0

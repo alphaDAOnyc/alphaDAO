@@ -1,20 +1,32 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&family=Quicksand:wght@500;600;700&family=Rubik&display=swap'); */
 @font-face {
   font-family: 'Apple SD Gothic Neo';
-  src: url('/fonts/FontsFree-Net-Apple-SD-Gothic-Neo-Bold.ttf') format('truetype');
-  font-weight: bold;
+  src: url('/fonts/AppleSDGothicNeoM00-03.otf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/AppleSDGothicNeoB00-07.otf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Osaka';
   src: url('/fonts/Osaka-01.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'PingFang SC';
-  src: url('/fonts/PingFangSC-Semibold.woff2') format('truetype');
-  font-weight: bold;
+  src: url('/fonts/PingFang Medium.otf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang SC';
+  src: url('/fonts/PingFang Medium.otf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 

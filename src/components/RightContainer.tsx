@@ -1,7 +1,15 @@
 import { Box, SxProps } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 
-export default function RightContainer({ sxStyle, children }: { sxStyle?: SxProps; children?: any }) {
+export default function RightContainer({
+  sxStyle,
+  children,
+  width,
+}: {
+  sxStyle?: SxProps
+  children?: any
+  width?: string
+}) {
   const [bodyWidth, setBodyWidth] = useState(1140)
 
   useEffect(() => {
@@ -21,7 +29,7 @@ export default function RightContainer({ sxStyle, children }: { sxStyle?: SxProp
   return (
     <Box display={'flex'} flexDirection="row-reverse" sx={{ ...sxStyle }}>
       <Box
-        width={bodyWidth}
+        width={width || bodyWidth}
         sx={{
           background: '#fff',
         }}

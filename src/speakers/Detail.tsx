@@ -1,4 +1,4 @@
-import { Typography, Box, Avatar } from '@mui/material'
+import { Typography, Box, Avatar, Link } from '@mui/material'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Banner from '../components/Banner'
@@ -6,6 +6,7 @@ import RightContainer from '../components/RightContainer'
 import { CommonWidth } from '../components/Styled'
 // import Avatar from '@mui/material/Avatar'
 import { getSpeakerByName } from '../data/speakers'
+import { useIsSMDown } from '../theme'
 
 function Tag({ className }: { className: string }) {
   return (
@@ -58,26 +59,28 @@ function Tag({ className }: { className: string }) {
 }
 
 export default function Speakers() {
+  const isSm = useIsSMDown()
+
   const router = useRouter()
   const speakerInfo = getSpeakerByName(router.query?.name)
 
   return (
     <Box>
       <Banner />
-      <RightContainer sxStyle={{ marginTop: '-140px' }}>
+      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-80px' : '-140px' }}>
         <CommonWidth
           sx={{
-            padding: '131px 0 286px 185px',
+            padding: { xs: '50px 30px', sm: '131px 0 286px 185px' },
           }}
         >
-          <Typography variant="h2" color={'#3A88F5'} fontSize="120px" lineHeight={'144px'}>
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 120} lineHeight={isSm ? '66px' : '144px'}>
             {speakerInfo?.name}
           </Typography>
           <Box
             sx={{
-              mt: '120px',
+              mt: isSm ? '80px' : '120px',
               display: 'grid',
-              gridTemplateColumns: '173px 1fr',
+              gridTemplateColumns: isSm ? 'unset' : '173px 1fr',
               paddingRight: '30px',
               gridColumnGap: '120px',
             }}
@@ -85,6 +88,8 @@ export default function Speakers() {
             <Box
               sx={{
                 position: 'relative',
+                display: 'flex',
+                flexDirection: isSm ? 'row-reverse' : 'unset',
                 '& .icon': {
                   position: 'absolute',
                   right: '-36px',
@@ -95,16 +100,32 @@ export default function Speakers() {
               <Avatar variant="square" sx={{ width: 173, height: 173 }} src={speakerInfo?.avatar}>
                 no image
               </Avatar>
-              <Tag className="icon" />
+              <Link href={speakerInfo?.link} target="_blank" underline="none">
+                <Tag className="icon" />
+              </Link>
             </Box>
-            <Box>
+            <Box mt={isSm ? '80px' : 0}>
               {speakerInfo?.content.map((con, index) => (
                 <>
-                  <Typography key={index} color={'#9881FF'} mb="10px" fontSize={28} lineHeight="33px" variant="h4">
+                  <Typography
+                    key={index}
+                    color={'#9881FF'}
+                    mb="10px"
+                    fontSize={isSm ? 26 : 28}
+                    lineHeight="33px"
+                    variant="h4"
+                  >
                     {con.name}
                   </Typography>
                   {con.item.map((a, b) => (
-                    <Typography key={b} color={'#595656'} mb="25px" fontSize={21} lineHeight="32px" variant="body1">
+                    <Typography
+                      key={b}
+                      color={'#595656'}
+                      mb="25px"
+                      fontSize={isSm ? 18 : 21}
+                      lineHeight={isSm ? '24px' : '32px'}
+                      variant="body1"
+                    >
                       {a}
                     </Typography>
                   ))}

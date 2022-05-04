@@ -11,6 +11,7 @@ const AppWrapper = styled('div')(({ theme }) => ({
   background: 'radial-gradient(100% 100% at 100% 0%, #F3F3FF 0%, #E9F2FE 60.81%, #E0D7FE 100%)',
   [theme.breakpoints.down('sm')]: {
     minWidth: 'unset',
+    background: '#F2F2F2',
   },
 }))
 
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps }: IAppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>alphaDAO</title>
+        <title>AlphaDAO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Head>
       <AppWrapper>

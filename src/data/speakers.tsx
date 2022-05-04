@@ -15,6 +15,7 @@ export interface SpeakerInfo {
   name: string
   desc: string
   avatar: string
+  link?: string
   content: SpeakerInfoItem[]
 }
 
@@ -23,6 +24,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Ryan Wyatt',
     desc: 'CEO of Polygon Studios',
     avatar: RyanWyatt.src,
+    link: 'https://www.linkedin.com/in/ryancwyatt/',
     content: [
       {
         name: 'CEO of Polygon Studios',
@@ -37,6 +39,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Tommaso Sandretto',
     desc: 'Partner & Director of Research at CoinFund',
     avatar: TommasoSandretto.src,
+    link: 'https://www.linkedin.com/in/tommaso-sandretto-b675349/',
     content: [
       {
         name: `Partner & Director of Research at CoinFund`,
@@ -60,6 +63,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Chris Gonsalves',
     desc: 'CEO, IG: @cgny_ Community Gaming',
     avatar: ChrisGonsalves.src,
+    link: 'https://www.linkedin.com/in/esports/',
     content: [
       {
         name: `CEO, IG: @cgny_ Community Gaming`,
@@ -71,9 +75,10 @@ export const speakerList: SpeakerInfo[] = [
     ],
   },
   {
-    name: 'Andrew Dugree',
+    name: 'Andrew Durgee',
     desc: 'Head of Crypto and Tokenization at Republic',
     avatar: AndrewDugree.src,
+    link: 'https://www.linkedin.com/in/andrew-durgee-b9367018/',
     content: [
       {
         name: `Head of Crypto and Tokenization at Republic`,
@@ -87,6 +92,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Richard Kim',
     desc: 'General Partner at Galaxy Interactive',
     avatar: RichardKim.src,
+    link: 'https://www.linkedin.com/in/richardkimgalaxy/',
     content: [
       {
         name: `General Partner at Galaxy Interactive`,
@@ -100,6 +106,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Batis Samadian',
     desc: 'Co-Founder of Saffron and Founder of SPACE',
     avatar: BatisSamadian.src,
+    link: 'https://www.linkedin.com/in/batissamadian/',
     content: [
       {
         name: `Co-Founder of Saffron and Founder of SPACE`,
@@ -113,6 +120,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Evan Feng',
     desc: 'Partner and the Director of Research at CoinFund',
     avatar: EvanFeng.src,
+    link: 'https://www.linkedin.com/in/evan-feng/',
     content: [
       {
         name: `Partner and the Director of Research at CoinFund`,
@@ -126,6 +134,7 @@ export const speakerList: SpeakerInfo[] = [
     name: 'Ciara-Sun',
     desc: 'Chief Of Staff at Huobi Global',
     avatar: CiaraSun.src,
+    link: 'https://www.linkedin.com/in/ciara-sun-565a585b/',
     content: [
       {
         name: `Chief Of Staff at Huobi Global`,
