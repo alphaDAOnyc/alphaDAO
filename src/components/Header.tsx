@@ -181,7 +181,7 @@ function Menus({ close }: { close?: () => void }) {
     {
       name: 'Ticket',
       link: '/ticket',
-      externalLink: 'https://www.google.com/',
+      externalLink: '',
     },
   ]
 

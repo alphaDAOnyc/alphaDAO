@@ -4,6 +4,7 @@ import Button from './Button/Button'
 import { CommonContainer } from './Styled'
 import { contactCommit } from '../fetch/index'
 import Logo from '../assets/svg/logo.svg'
+import tgImg from '../assets/svg/tg1.svg'
 import { useIsSMDown } from '../theme'
 
 const currencies = [
@@ -284,7 +285,7 @@ export default function Footer() {
               fontSize={{ xs: 16, sm: 32 }}
               lineHeight={{ xs: '21px', sm: '38px' }}
             >
-              sachi@polygon.technology
+              galaxypolygon.com
             </Typography>
             <Link underline="none" href="https://twitter.com/0xAlphaDAO" target={'_blank'}>
               <img
@@ -294,6 +295,9 @@ export default function Footer() {
                 }
                 alt=""
               />
+            </Link>
+            <Link underline="none" target={'_blank'}>
+              <img alt="" style={{ width: isSm ? 26 : 35 }} src={tgImg.src} />
             </Link>
           </Box>
           <img src={Logo.src} style={{ width: isSm ? 50 : 76 }} alt="" />
