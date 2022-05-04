@@ -296,7 +296,7 @@ export default function Footer() {
                 alt=""
               />
             </Link>
-            <Link underline="none" target={'_blank'}>
+            <Link underline="none" href="https://t.me/FeltGood" target={'_blank'}>
               <img alt="" style={{ width: isSm ? 26 : 35 }} src={tgImg.src} />
             </Link>
           </Box>
