@@ -45,7 +45,9 @@ export default function About() {
           </Box>
         </Box>
       )}
-      <RightContainer sxStyle={{ marginTop: { xs: '0px', sm: '-140px' }, background: '#fff', padding: '0 30px' }}>
+      <RightContainer
+        sxStyle={{ marginTop: { xs: '0px', sm: '-140px' }, background: '#fff', padding: isSm ? '0 30px' : 0 }}
+      >
         <CommonWidth>
           <Box
             sx={{
