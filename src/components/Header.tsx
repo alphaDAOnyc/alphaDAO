@@ -1,4 +1,4 @@
-import { Box, Drawer, Link as MuiLink, Tooltip, useTheme } from '@mui/material'
+import { Box, Drawer, Link as MuiLink, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 import { CommonContainer } from './Styled'
 import { useIsSMDown } from '../theme'
@@ -181,7 +181,7 @@ function Menus({ close }: { close?: () => void }) {
     {
       name: 'Ticket',
       link: '',
-      externalLink: 'https://galaxypolygon.com',
+      externalLink: 'https://www.eventbrite.com/e/builders-day-by-galaxy-digital-and-polygon-registration-321672008637',
     },
   ]
 
@@ -197,21 +197,19 @@ function Menus({ close }: { close?: () => void }) {
     <>
       {list.map((item, index) =>
         item.externalLink ? (
-          <Tooltip title="Coming soon" arrow>
-            <span className="link-span">
-              <MuiLink
-                key={index}
-                target="_blank"
-                onClick={close}
-                className="hover6"
-                fontFamily={'inherit'}
-                underline="none"
-                // href={item.externalLink}
-              >
-                {item.name}
-              </MuiLink>
-            </span>
-          </Tooltip>
+          <span className="link-span">
+            <MuiLink
+              key={index}
+              target="_blank"
+              onClick={close}
+              className="hover6"
+              fontFamily={'inherit'}
+              underline="none"
+              href={item.externalLink}
+            >
+              {item.name}
+            </MuiLink>
+          </span>
         ) : (
           <span
             key={index}

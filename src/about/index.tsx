@@ -153,7 +153,7 @@ export default function About() {
                 proof-of-stake consensus.
               </Typography>
             </Box>
-            <Box mt={isSm ? '30px' : 0}>
+            <Box mt={isSm ? '60px' : 0}>
               <img src={GalaxyLogo.src} alt="" style={{ height: 43 }} />
               <Typography
                 mt={isSm ? '15px' : '47px'}
