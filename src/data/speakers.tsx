@@ -132,12 +132,12 @@ export const speakerList: SpeakerInfo[] = [
   },
   {
     name: 'Ciara-Sun',
-    desc: 'Chief Of Staff at Huobi Global',
+    desc: 'Founder of C2 Ventures',
     avatar: CiaraSun.src,
     link: 'https://www.linkedin.com/in/ciara-sun-565a585b/',
     content: [
       {
-        name: `Chief Of Staff at Huobi Global`,
+        name: `Founder of C2 Ventures`,
         item: [
           `Ciara Sun, Financial Analysis MBA, has rich work experiences in financial analysis, strategic consulting and corporate management experiences in Boston Consulting Group, Deloitte Consulting and Ernst & Young. She Collaborated with Banking and Capital Markets group for 15 major banks, performed investment analytics to support clients withbillion dollars of AUM, including hedge funds, private equity firms, and investment management corporations. She co-founded and served as former COO of US Multidimensional Network Technology Co.Ltd. She won the Championship for 2018 Blockchain Consensys without borders competition.`,
         ],

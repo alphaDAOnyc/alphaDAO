@@ -59,12 +59,12 @@ export default function Header() {
           // }}
         >
           <Link href="/" passHref>
-            <Box display={'flex'} gap="19px" alignItems={'center'}>
-              <Box display="flex" sx={{ cursor: 'pointer', '& img': { height: isSm ? 26 : 'unset' } }}>
+            <Box display={'flex'} gap={isSm ? '10px' : '19px'} alignItems={'center'}>
+              <Box display="flex" sx={{ cursor: 'pointer', '& img': { height: isSm ? 22 : 'unset' } }}>
                 <img src={PolygonLogo.src} alt="" />
               </Box>
 
-              <Box sx={{ borderRight: `2px solid #9881FF`, height: 47 }}></Box>
+              <Box sx={{ borderRight: `2px solid #9881FF`, height: isSm ? 24 : 47 }}></Box>
 
               <Box display="flex" sx={{ cursor: 'pointer', '& img': { height: isSm ? 26 : 'unset' } }}>
                 <img src={GalaxyLogo.src} alt="" />
@@ -197,9 +197,8 @@ function Menus({ close }: { close?: () => void }) {
     <>
       {list.map((item, index) =>
         item.externalLink ? (
-          <span className="link-span">
+          <span className="link-span" key={index}>
             <MuiLink
-              key={index}
               target="_blank"
               onClick={close}
               className="hover6"

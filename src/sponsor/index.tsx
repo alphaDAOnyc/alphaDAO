@@ -14,39 +14,48 @@ export default function Sponsor() {
   return (
     <Box>
       <Banner />
-      <Box sx={{ marginTop: '-80px', display: 'flex', flexDirection: 'row-reverse' }}>
-        <Box
-          width={isSm ? '85%' : undefined}
-          height={isSm ? '80px' : 0}
-          sx={{
-            background: '#fff',
-          }}
-        ></Box>
-      </Box>
-      <RightContainer sxStyle={{ marginTop: isSm ? '-15px' : '-140px' }}>
+      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-60px' : '-140px' }}>
         <CommonWidth
           sx={{
-            padding: { xs: '0 30px 150px', sm: '131px 0 412px 191px' },
+            padding: { xs: '65px 30px', sm: '110px 0 113px 185px' },
           }}
         >
-          <Typography
-            variant="h2"
-            ml={isSm ? '15%' : 0}
-            color={'#3A88F5'}
-            fontSize={isSm ? 50 : 120}
-            lineHeight={isSm ? '66px' : '144px'}
-          >
-            Sponsor
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 100} lineHeight={isSm ? '66px' : '120px'}>
+            Sponsors
           </Typography>
-          <Box display={'flex'} mt={isSm ? '150px' : '218px'} justifyContent="space-between" alignItems={'center'}>
+          <Box
+            display={'flex'}
+            mt={isSm ? '51px' : '166px'}
+            justifyContent={isSm ? 'center' : 'space-between'}
+            alignItems={'center'}
+            flexWrap={isSm ? 'wrap' : 'unset'}
+            gap="10px"
+            sx={{
+              '&>*': {
+                background: '#FFFFFF',
+                border: '1px solid #9881FF',
+                borderRadius: '30px',
+                width: isSm ? 120 : 200,
+                height: isSm ? 120 : 192,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              },
+            }}
+          >
             <Link underline="none" href="https://www.galaxydigital.io" target="_blank">
-              <img src={GalaxyLogo.src} alt="" style={{ height: isSm ? 24 : 50 }} />
+              <img src={GalaxyLogo.src} alt="" style={{ height: isSm ? 24 : 37 }} />
             </Link>
             <Link underline="none" href="https://polygon.technology/" target="_blank">
-              <img src={PolygonLogo.src} alt="" style={{ height: isSm ? 24 : 50 }} />
+              <img src={PolygonLogo.src} alt="" style={{ height: isSm ? 24 : 37 }} />
             </Link>
-            <Link underline="none" href="https://www.meetalpha.org/" target="_blank">
-              <img src={AlphaLogo.src} alt="" style={{ width: isSm ? 36 : 70 }} />
+            <Link
+              underline="none"
+              href="https://www.meetalpha.org/"
+              target="_blank"
+              sx={{ marginTop: isSm ? '-30px' : 0 }}
+            >
+              <img src={AlphaLogo.src} alt="" style={{ width: isSm ? 40 : 70 }} />
             </Link>
           </Box>
         </CommonWidth>

@@ -67,18 +67,18 @@ export default function Speakers() {
   return (
     <Box>
       <Banner />
-      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-80px' : '-140px' }}>
+      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-60px' : '-140px' }}>
         <CommonWidth
           sx={{
-            padding: { xs: '50px 30px', sm: '131px 0 286px 185px' },
+            padding: { xs: '65px 30px', sm: '110px 0 113px 185px' },
           }}
         >
-          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 120} lineHeight={isSm ? '66px' : '144px'}>
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 28 : 100} lineHeight={isSm ? '33px' : '120px'}>
             {speakerInfo?.name}
           </Typography>
           <Box
             sx={{
-              mt: isSm ? '80px' : '120px',
+              mt: isSm ? '55px' : '120px',
               display: 'grid',
               gridTemplateColumns: isSm ? 'unset' : '173px 1fr',
               paddingRight: '30px',
@@ -97,22 +97,25 @@ export default function Speakers() {
                 },
               }}
             >
-              <Avatar variant="square" sx={{ width: 173, height: 173 }} src={speakerInfo?.avatar}>
+              <Avatar
+                variant="square"
+                sx={{ width: isSm ? 90 : 173, height: isSm ? 90 : 173 }}
+                src={speakerInfo?.avatar}
+              >
                 no image
               </Avatar>
               <Link href={speakerInfo?.link} target="_blank" underline="none">
                 <Tag className="icon" />
               </Link>
             </Box>
-            <Box mt={isSm ? '80px' : 0}>
+            <Box mt={isSm ? '55px' : 0}>
               {speakerInfo?.content.map((con, index) => (
-                <>
+                <Box pb={isSm ? '20px' : '25px'} key={index}>
                   <Typography
-                    key={index}
                     color={'#9881FF'}
                     mb="10px"
-                    fontSize={isSm ? 26 : 28}
-                    lineHeight="33px"
+                    fontSize={isSm ? 16 : 28}
+                    lineHeight={isSm ? '20px' : '33px'}
                     variant="h4"
                   >
                     {con.name}
@@ -121,15 +124,15 @@ export default function Speakers() {
                     <Typography
                       key={b}
                       color={'#595656'}
-                      mb="25px"
-                      fontSize={isSm ? 18 : 21}
-                      lineHeight={isSm ? '24px' : '32px'}
+                      mb={isSm ? '12px' : '25px'}
+                      fontSize={isSm ? 12 : 21}
+                      lineHeight={isSm ? '18px' : '32px'}
                       variant="body1"
                     >
                       {a}
                     </Typography>
                   ))}
-                </>
+                </Box>
               ))}
             </Box>
           </Box>

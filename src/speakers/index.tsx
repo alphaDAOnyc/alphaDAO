@@ -14,31 +14,31 @@ export default function Speakers() {
   return (
     <Box>
       <Banner />
-      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-80px' : '-140px' }}>
+      <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-60px' : '-140px' }}>
         <CommonWidth
           sx={{
-            padding: { xs: '50px 30px', sm: '131px 0 286px 185px' },
+            padding: { xs: '65px 30px', sm: '110px 0 113px 185px' },
           }}
         >
-          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 120} lineHeight={isSm ? '66px' : '144px'}>
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 28 : 100} lineHeight={isSm ? '33px' : '120px'}>
             Speakers
           </Typography>
           <Typography
-            mt={isSm ? '20px' : '47px'}
+            mt={isSm ? '10px' : '39px'}
             variant="h4"
             color={'#244B6F'}
-            fontSize={isSm ? 24 : 42}
-            lineHeight={isSm ? '30px' : '50px'}
+            fontSize={isSm ? 14 : 36}
+            lineHeight={isSm ? '18px' : '43px'}
             maxWidth="830px"
           >
             Meet our renowned speakers and panelists
           </Typography>
           <Box
-            mt="110px"
+            mt={isSm ? '38px' : '165px'}
             sx={{
               display: 'grid',
-              gridTemplateColumns: isSm ? 'repeat(auto-fill, 80%)' : 'repeat(auto-fill, 180px)',
-              gridGap: isSm ? '70px 118px' : '107px 118px',
+              gridTemplateColumns: isSm ? 'repeat(auto-fill, 60%)' : 'repeat(auto-fill, 180px)',
+              gridGap: isSm ? '50px 118px' : '107px 118px',
             }}
           >
             {speakerList.map((item) => (
@@ -57,22 +57,32 @@ function SpeakerItem({ speakerInfo }: { speakerInfo: SpeakerInfo }) {
 
   return (
     <Box sx={{ cursor: 'pointer' }} onClick={() => router.push('/speakers/' + speakerInfo.name)}>
-      <Avatar variant="square" sx={{ width: 173, height: 173, margin: isSm ? 'auto' : 0 }} src={speakerInfo.avatar}>
+      <Avatar
+        variant="square"
+        sx={{ width: isSm ? 90 : 173, height: isSm ? 90 : 173, margin: isSm ? 'auto' : 0 }}
+        src={speakerInfo.avatar}
+      >
         no image
       </Avatar>
       <Typography
-        mt="26px"
+        mt={isSm ? '13px' : '26px'}
         textAlign={isSm ? 'center' : 'unset'}
         sx={{ whiteSpace: 'nowrap' }}
         // letterSpacing="-1.47851px"
         variant="h4"
         color="#9881FF"
-        fontSize={isSm ? 24 : 28}
-        lineHeight="34px"
+        fontSize={isSm ? 16 : 28}
+        lineHeight={isSm ? '24px' : '34px'}
       >
         {speakerInfo.name}
       </Typography>
-      <Typography textAlign={isSm ? 'center' : 'unset'} variant="body1" color="#595656" fontSize={15} lineHeight="20px">
+      <Typography
+        textAlign={isSm ? 'center' : 'unset'}
+        variant="body1"
+        color="#595656"
+        fontSize={isSm ? 12 : 15}
+        lineHeight={isSm ? '16px' : '20px'}
+      >
         {speakerInfo.desc}
       </Typography>
     </Box>
