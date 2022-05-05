@@ -2,7 +2,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import BannerHomeImg from '../../assets/img/banner_home.png'
 import BannerHomeMobileImg from '../../assets/img/banner_home_mobile.png'
-import BannerMobileImg from '../../assets/img/banner.png'
+import BannerMobileImg from '../../assets/img/banner_mobile.png'
 import BannerImg from '../../assets/img/banner.png'
 import { useIsSMDown } from '../../theme'
 
@@ -15,7 +15,7 @@ export default function Banner({ home }: { home?: boolean }) {
         '& img': {
           width: '100vw',
           objectFit: 'cover',
-          minHeight: isSm ? '180px' : '320px',
+          minHeight: isSm ? 'auto' : '320px',
         },
       }}
     >
