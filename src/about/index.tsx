@@ -63,8 +63,8 @@ export default function About() {
               mb="41px"
               variant="h4"
               color={'#9482FE'}
-              fontSize={14}
-              lineHeight={'18px'}
+              fontSize={16}
+              lineHeight={'22px'}
             >
               Connect, idealize, create & develop! Bringing leading web3 builders together.
             </Typography>
@@ -93,7 +93,7 @@ export default function About() {
               color="#595656"
             >
               From initial conversations about a Galaxy Interactive/Polygon-developed web3 community innovation space,
-              Builders’ Day will act as an MVP forum for our teams to engage directly with the best web3 developers,
+              Builders' Day will act as an MVP forum for our teams to engage directly with the best web3 developers,
               designers, and creators in NYC (and beyond), providing valuable connectivity and setting the stage (with a
               scalable template) for expansion into other cities as well as planting the seeds for more hands-on,
               comprehensive incubation in the future.

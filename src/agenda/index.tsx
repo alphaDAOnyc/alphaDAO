@@ -23,7 +23,7 @@ export default function Agenda() {
             padding: { xs: '55px 0 80px 30px ', sm: '110px 0 180px 190px' },
           }}
         >
-          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 100} lineHeight={isSm ? '66px' : '120px'}>
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 28 : 100} lineHeight={isSm ? '34px' : '120px'}>
             Agenda
           </Typography>
           <Typography

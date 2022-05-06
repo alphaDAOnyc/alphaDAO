@@ -17,10 +17,10 @@ export default function Sponsor() {
       <RightContainer width={isSm ? '85%' : undefined} sxStyle={{ marginTop: isSm ? '-60px' : '-140px' }}>
         <CommonWidth
           sx={{
-            padding: { xs: '65px 30px', sm: '110px 0 113px 185px' },
+            padding: { xs: '65px 30px 100px', sm: '110px 0 113px 185px' },
           }}
         >
-          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 50 : 100} lineHeight={isSm ? '66px' : '120px'}>
+          <Typography variant="h2" color={'#3A88F5'} fontSize={isSm ? 28 : 100} lineHeight={isSm ? '34px' : '120px'}>
             Sponsors
           </Typography>
           <Box

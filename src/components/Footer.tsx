@@ -278,6 +278,8 @@ export default function Footer() {
             </Button>
           </Box>
         </Box>
+      </CommonContainer>
+      <CommonContainer maxWidth={'1300px'}>
         <Box display={'flex'} justifyContent="space-between" flexWrap={'wrap'} alignItems={'center'}>
           <Box display={'grid'} gap={isSm ? '6px' : '20px'}>
             <Box display={'flex'} gap={isSm ? '16px' : '60px'} alignItems={'center'}>

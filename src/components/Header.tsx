@@ -46,7 +46,7 @@ export default function Header() {
         }}
       >
         <CommonContainer
-          maxWidth={isSm ? 'unset' : '1180px'}
+          maxWidth={isSm ? 'unset' : '1300px'}
           height={'100%'}
           display={'flex'}
           padding="0 30px"
@@ -60,7 +60,7 @@ export default function Header() {
         >
           <Link href="/" passHref>
             <Box display={'flex'} gap={isSm ? '10px' : '19px'} alignItems={'center'}>
-              <Box display="flex" sx={{ cursor: 'pointer', '& img': { height: isSm ? 22 : 'unset' } }}>
+              <Box display="flex" sx={{ cursor: 'pointer', '& img': { height: isSm ? 26 : 'unset' } }}>
                 <img src={PolygonLogo.src} alt="" />
               </Box>
 
@@ -181,7 +181,7 @@ function Menus({ close }: { close?: () => void }) {
     {
       name: 'Ticket',
       link: '',
-      externalLink: 'https://www.eventbrite.com/e/builders-day-by-galaxy-digital-and-polygon-registration-321672008637',
+      externalLink: 'https://lu.ma/ysbf2f6b',
     },
   ]
 
